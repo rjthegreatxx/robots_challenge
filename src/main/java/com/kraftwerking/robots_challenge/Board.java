@@ -1,18 +1,10 @@
 package main.java.com.kraftwerking.robots_challenge;
 
 public class Board {
-    private int[][] board;
+    private final int[][] board;
 
     public Board() {
         board = new int[5][5]; // create a 5x5 board
-    }
-
-    public void setCell(int row, int col, int value) {
-        board[row][col] = value;
-    }
-
-    public int getCell(int row, int col) {
-        return board[row][col];
     }
 
     public void printBoard() {

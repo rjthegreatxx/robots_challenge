@@ -8,8 +8,7 @@ import java.util.List;
 
 public class GameRunner {
     private static final String CURRENT_PATH = "./src/main/resources/";
-    private Robot robot;
-    private Board board;
+    private final Robot robot;
 
     public void runGame(){
         System.out.println("Robots Challenge");
@@ -93,8 +92,8 @@ public class GameRunner {
         return result;
     }
     public GameRunner() {
-        this.board = new Board();
-        this.robot = new Robot(0,0,1,"R2D2",null,this.board);
+        Board board = new Board();
+        this.robot = new Robot(0,0,1,"R2D2",null, board);
     }
 
 }

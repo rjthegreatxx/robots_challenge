@@ -87,35 +87,44 @@ public class Robot {
             case "WEST":
                 newX = newX - 1;
                 break;
-            default:
-                throw new IllegalArgumentException("Invalid command: " + direction);
+
         }
         return board.placeRobot(newX,newY,id);
     }
 
     public String rotateRobot(String command) {
         if(command.equals("LEFT")){
-            if(this.direction.equals("NORTH")){
-                this.direction = "WEST";
-            } else if(this.direction.equals("SOUTH")){
-                this.direction = "EAST";
-            } else if(this.direction.equals("EAST")){
-                this.direction = "SOUTH";
-            } else if(this.direction.equals("WEST")){
-                this.direction = "NORTH";
+            switch (this.direction) {
+                case "NORTH":
+                    this.direction = "WEST";
+                    break;
+                case "SOUTH":
+                    this.direction = "EAST";
+                    break;
+                case "EAST":
+                    this.direction = "SOUTH";
+                    break;
+                case "WEST":
+                    this.direction = "NORTH";
+                    break;
             }
 
         }
 
         if(command.equals("RIGHT")){
-            if(this.direction.equals("NORTH")){
-                this.direction = "EAST";
-            } else if(this.direction.equals("SOUTH")){
-                this.direction = "WEST";
-            } else if(this.direction.equals("EAST")){
-                this.direction = "NORTH";
-            } else if(this.direction.equals("WEST")){
-                this.direction = "SOUTH";
+            switch (this.direction) {
+                case "NORTH":
+                    this.direction = "EAST";
+                    break;
+                case "SOUTH":
+                    this.direction = "WEST";
+                    break;
+                case "EAST":
+                    this.direction = "NORTH";
+                    break;
+                case "WEST":
+                    this.direction = "SOUTH";
+                    break;
             }
 
         }
