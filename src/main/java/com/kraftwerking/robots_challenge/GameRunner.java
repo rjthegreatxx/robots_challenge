@@ -21,7 +21,10 @@ public class GameRunner {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        processCommands(commands);
+    }
 
+    private void processCommands(List<String> commands) {
         boolean firstCommand = false;
         for (String command : commands) {
             String result;
