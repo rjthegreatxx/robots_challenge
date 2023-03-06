@@ -129,6 +129,6 @@ public class Robot {
 
         }
 
-        return "Rotated LEFT new direction: " + this.direction;
+        return "Rotated " + command + " new direction: " + this.direction;
     }
 }
