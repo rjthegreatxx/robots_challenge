@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c75e6c1f-047e-46a7-9ac8-1161086c0467" name="Changes" comment="2 robots">
+    <list default="true" id="c75e6c1f-047e-46a7-9ac8-1161086c0467" name="Changes" comment="cleanup">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/RoboticMovement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/GameRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/GameRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/Robot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678158612562</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cleanup">
+      <created>1678158864181</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678158864181</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,9 +141,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="one robot" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="2 robots" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 robots" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

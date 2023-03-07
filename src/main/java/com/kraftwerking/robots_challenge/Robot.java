@@ -2,7 +2,7 @@ package main.java.com.kraftwerking.robots_challenge;
 
 import java.util.List;
 
-public class Robot {
+public class Robot implements RoboticMovement{
     private int posX;
     private int posY;
     private int id;
@@ -137,6 +137,7 @@ public class Robot {
                 break;
             case "LEFT": //merge LEFT RIGHT cases
             case "RIGHT":
+                System.out.println(command);
                 result = rotateRobot(command);
                 break;
             default:
