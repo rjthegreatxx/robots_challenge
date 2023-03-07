@@ -1,5 +1,7 @@
 package main.java.com.kraftwerking.robots_challenge;
 
+import java.util.List;
+
 public class Robot {
     private int posX;
     private int posY;
@@ -130,5 +132,74 @@ public class Robot {
         }
 
         return "Rotated " + command + " new direction: " + this.direction;
+    }
+
+    void processCommands(List<String> commands) {
+        boolean firstCommand = false;
+        for (String command : commands) {
+            String result;
+            if(!firstCommand){
+                if(command.startsWith("PLACE ")){
+                    firstCommand = true;
+                    //process place command
+                    result = processCommand(command);
+                } else {
+                    System.out.println("First command must be PLACE");
+                    continue;
+                }
+            }  else {
+                result = processCommand(command);
+            }
+
+            if(result.length() > 0) System.out.println(result);
+        }
+    }
+
+    public String processCommand(String command){
+        String result;
+        if(command.startsWith("PLACE ")){
+            System.out.println(command);
+            command = command.replaceAll("\\s", "").replaceAll("PLACE", "");
+            String[] commandList = command.split(",");
+            int x = Integer.parseInt(commandList[0]);
+            int y = Integer.parseInt(commandList[1]);
+            String direction = commandList[2];
+            result = placeRobotOnBoard(x,y,getId());
+
+            if(!result.equals("Not a valid move")){
+                setPosX(Integer.parseInt(commandList[0]));
+                setPosY(Integer.parseInt(commandList[1]));
+                setDirection(direction);
+            }
+            return result;
+        }
+
+        if(command.equals("REPORT")){
+            System.out.println(command);
+            getBoard().printBoard();
+            return "";
+        }
+
+        switch (command) {
+            case "MOVE":
+                System.out.println(command);
+                result = moveRobot(getPosX(),getPosY(),getId(),getDirection());
+
+                if(result.startsWith("Placed robot at")){
+                    int newX = result.charAt(result.length() - 3)  - '0';
+                    int newy = result.charAt(result.length() - 1)  - '0';
+                    setPosX(newX);
+                    setPosY(newy);
+                }
+                break;
+            case "LEFT": //merge LEFT RIGHT cases
+            case "RIGHT":
+                result = rotateRobot(command);
+                break;
+            default:
+                result = "Invalid command " + command;
+                break;
+        }
+        return result;
     }
 }
