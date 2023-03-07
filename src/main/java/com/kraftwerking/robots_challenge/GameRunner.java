@@ -37,7 +37,6 @@ public class GameRunner {
         }
         robot2.processCommands(commands2);
 
-        int i = 0;
     }
     public GameRunner() {
         board = new Board();

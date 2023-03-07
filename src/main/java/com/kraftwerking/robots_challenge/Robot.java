@@ -11,63 +11,6 @@ public class Robot {
 
     private Board board;
 
-    public int getPosX() {
-        return posX;
-    }
-
-    public int getPosY() {
-        return posY;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-
-    public void setPosX(int posX) {
-        this.posX = posX;
-    }
-
-    public void setPosY(int posY) {
-        this.posY = posY;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
-    public Board getBoard() {
-        return board;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Robot(int posX, int posY, int id, String name, String direction, Board board) {
-        this.posX = posX;
-        this.posY = posY;
-        this.id = id;
-        this.name = name;
-        this.direction = direction;
-        this.board = board;
-    }
-
     public String placeRobotOnBoard(int x, int y, int id) {
         return board.placeRobot(x,y,id);
     }
@@ -201,5 +144,62 @@ public class Robot {
                 break;
         }
         return result;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Robot(int posX, int posY, int id, String name, String direction, Board board) {
+        this.posX = posX;
+        this.posY = posY;
+        this.id = id;
+        this.name = name;
+        this.direction = direction;
+        this.board = board;
     }
 }
