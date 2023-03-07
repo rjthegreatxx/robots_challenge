@@ -26,16 +26,16 @@ public class GameRunner {
         }
         robot.processCommands(commands);
 
-        Robot robot2 = new Robot(0,0,2,"C3PO",null, board);
+        FastRobot fastrobot = new FastRobot(0,0,2,"C3PO",null, board);
         System.out.println("----------------");
-        System.out.println("Robot: " + robot2.getName());
+        System.out.println("Robot: " + fastrobot.getName());
 
         try {
             commands2 = Files.readAllLines(Paths.get(CURRENT_PATH + "input2.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        robot2.processCommands(commands2);
+        fastrobot.processCommands(commands2);
 
     }
     public GameRunner() {
