@@ -7,7 +7,7 @@ public class Board {
         board = new int[5][5]; // create a 5x5 board
     }
 
-    public void printBoard() {
+    public synchronized void printBoard() {
         for (int row = 0; row < 5; row++) {
             for (int col = 0; col < 5; col++) {
                 System.out.print(board[row][col] + " ");
@@ -16,7 +16,7 @@ public class Board {
         }
     }
 
-    public boolean checkValidMove(int x, int y, int id) {
+    public synchronized boolean checkValidMove(int x, int y, int id) {
         //will go off board
         if (x > 4) {
             System.out.println(x + "," + y + " not a valid move - IGNORED");
@@ -35,7 +35,7 @@ public class Board {
         return true;
     }
 
-    public String placeRobot(int x, int y, int id) {
+    public synchronized String placeRobot(int x, int y, int id) {
         if(!checkValidMove(x,y,id)){
             return "Not a valid move";
         }
@@ -46,7 +46,7 @@ public class Board {
         return "Placed robot at " + x + "," + y;
     }
 
-    private void deleteRobot(int id) {
+    private synchronized void deleteRobot(int id) {
         for (int row = 0; row < 5; row++) {
             for (int col = 0; col < 5; col++) {
                 if(board[row][col] == id){

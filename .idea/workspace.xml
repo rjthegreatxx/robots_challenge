@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c75e6c1f-047e-46a7-9ac8-1161086c0467" name="Changes" comment="interface">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/FastRobot.java" afterDir="false" />
+    <list default="true" id="c75e6c1f-047e-46a7-9ac8-1161086c0467" name="Changes" comment="hybrid inheritence, subclass of robot implements interface in different way">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/GameRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/GameRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/RoboticMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/RoboticMovement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/input2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/input2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678191991461</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="hybrid inheritence, subclass of robot implements interface in different way">
+      <created>1678192767272</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678192767272</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,7 +157,8 @@
     <MESSAGE value="2 robots" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="interface" />
+    <MESSAGE value="hybrid inheritence, subclass of robot implements interface in different way" />
+    <option name="LAST_COMMIT_MESSAGE" value="hybrid inheritence, subclass of robot implements interface in different way" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
