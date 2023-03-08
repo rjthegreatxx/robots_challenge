@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c75e6c1f-047e-46a7-9ac8-1161086c0467" name="Changes" comment="make board methods synchronized/thread safe">
+    <list default="true" id="c75e6c1f-047e-46a7-9ac8-1161086c0467" name="Changes" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/FastRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/FastRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/GameRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/GameRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/Robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/RobotsChallengeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kraftwerking/robots_challenge/RobotsChallengeApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +145,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678192917108</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="make gamerunner multithreaded, implement runnable interface, print out threadnumber.  execute multiple concurrent threads">
+      <created>1678284511634</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678284511634</updated>
+    </task>
+    <task id="LOCAL-00011" summary="cleanup">
+      <created>1678284591565</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678284591565</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,11 +176,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="one robot" />
     <MESSAGE value="2 robots" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="interface" />
     <MESSAGE value="hybrid inheritence, subclass of robot implements interface in different way" />
     <MESSAGE value="make board methods synchronized/thread safe" />
-    <option name="LAST_COMMIT_MESSAGE" value="make board methods synchronized/thread safe" />
+    <MESSAGE value="make gamerunner multithreaded, implement runnable interface, print out threadnumber.  execute multiple concurrent threads" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
