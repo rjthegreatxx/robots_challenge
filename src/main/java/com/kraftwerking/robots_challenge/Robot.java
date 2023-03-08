@@ -11,6 +11,8 @@ public class Robot implements RoboticMovement{
 
     private Board board;
 
+    private int threadNumber;
+
     public String placeRobotOnBoard(int x, int y, int id) {
         return board.placeRobot(x,y,id);
     }
@@ -94,14 +96,14 @@ public class Robot implements RoboticMovement{
                 result = processCommand(command);
             }
 
-            if(result.length() > 0) System.out.println(result);
+            System.out.println(result);
         }
     }
 
     public String processCommand(String command){
         String result;
         if(command.startsWith("PLACE ")){
-            System.out.println(command);
+            System.out.println(command + " - threadNumber: " + threadNumber);
             command = command.replaceAll("\\s", "").replaceAll("PLACE", "");
             String[] commandList = command.split(",");
             int x = Integer.parseInt(commandList[0]);
@@ -118,14 +120,14 @@ public class Robot implements RoboticMovement{
         }
 
         if(command.equals("REPORT")){
-            System.out.println(command);
+            System.out.println(command + " - threadNumber: " + threadNumber);
             getBoard().printBoard();
-            return "";
+            return "----------------";
         }
 
         switch (command) {
             case "MOVE":
-                System.out.println(command);
+                System.out.println(command + " - threadNumber: " + threadNumber);
                 result = moveRobot(getPosX(),getPosY(),getId(),getDirection());
 
                 if(result.startsWith("Placed robot at")){
@@ -137,7 +139,7 @@ public class Robot implements RoboticMovement{
                 break;
             case "LEFT": //merge LEFT RIGHT cases
             case "RIGHT":
-                System.out.println(command);
+                System.out.println(command + " - threadNumber: " + threadNumber);
                 result = rotateRobot(command);
                 break;
             default:
@@ -195,12 +197,13 @@ public class Robot implements RoboticMovement{
         this.name = name;
     }
 
-    public Robot(int posX, int posY, int id, String name, String direction, Board board) {
+    public Robot(int posX, int posY, int id, String name, String direction, Board board, int threadNumber) {
         this.posX = posX;
         this.posY = posY;
         this.id = id;
         this.name = name;
         this.direction = direction;
         this.board = board;
+        this.threadNumber = threadNumber;
     }
 }

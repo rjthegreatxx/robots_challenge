@@ -6,15 +6,17 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameRunner {
+public class GameRunner implements Runnable { //preferable to extend Thread class, can extend other classes than Thread
     private static final String CURRENT_PATH = "./src/main/resources/";
     private static Board board;
 
-    public void runGame(){
-        System.out.println("Robots Challenge");
+    private int threadNumber;
+
+    public void run(){
+        System.out.println("Robots Challenge - threadNumber: " + threadNumber);
         System.out.println("----------------");
-        Robot robot = new Robot(0,0,1,"R2D2",null, board);
-        System.out.println("Robot: " + robot.getName());
+        Robot robot = new Robot(0,0,1,"R2D2",null, board,threadNumber);
+        System.out.println("Robot: " + robot.getName() + " - threadNumber: " + threadNumber);
 
         List<String> commands = new ArrayList<>();
         List<String> commands2 = new ArrayList<>();
@@ -26,9 +28,8 @@ public class GameRunner {
         }
         robot.processCommands(commands);
 
-        FastRobot fastrobot = new FastRobot(0,0,2,"C3PO",null, board);
-        System.out.println("----------------");
-        System.out.println("Robot: " + fastrobot.getName());
+        FastRobot fastrobot = new FastRobot(0,0,2,"C3PO",null, board,threadNumber);
+        System.out.println("Robot: " + fastrobot.getName() + " - threadNumber: " + threadNumber);
 
         try {
             commands2 = Files.readAllLines(Paths.get(CURRENT_PATH + "input2.txt"));
@@ -38,8 +39,9 @@ public class GameRunner {
         fastrobot.processCommands(commands2);
 
     }
-    public GameRunner() {
+    public GameRunner(int threadNumber) {
         board = new Board();
+        this.threadNumber = threadNumber;
     }
 
 }
