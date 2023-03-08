@@ -10,7 +10,7 @@ public class GameRunner implements Runnable { //preferable to extend Thread clas
     private static final String CURRENT_PATH = "./src/main/resources/";
     private static Board board;
 
-    private int threadNumber;
+    private final int threadNumber;
 
     public void run(){
         System.out.println("Robots Challenge - threadNumber: " + threadNumber);

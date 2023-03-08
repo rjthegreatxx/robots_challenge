@@ -11,7 +11,7 @@ public class Robot implements RoboticMovement{
 
     private Board board;
 
-    private int threadNumber;
+    private final int threadNumber;
 
     public String placeRobotOnBoard(int x, int y, int id) {
         return board.placeRobot(x,y,id);
